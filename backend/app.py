@@ -1,12 +1,12 @@
 from flask import Flask, jsonify, request
 import joblib
-# from flask_cors import CORS
+from flask_cors import CORS
 
 app = Flask(__name__)
-# CORS(app)
+CORS(app)
 
 # Load the ML model
-model = joblib.load('/Users/DT/diagnosify/mp-react/backend/ML_Models/heart_disease_model.sav')
+model = joblib.load('C:/Users/abhis/Desktop/mp-react/frontend/src/saved_models/heart_disease_model.sav')
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -36,5 +36,5 @@ def predict():
     return jsonify({'prediction': prediction.tolist()})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,port=5000)
 

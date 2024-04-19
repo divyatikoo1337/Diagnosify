@@ -27,7 +27,8 @@ function MLPredictor() {
     });
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault()
     try {
       const response = await axios.post("http://localhost:5000/predict", {
         age: parseInt(formData.age),
