@@ -3,10 +3,10 @@ import joblib
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=['http://localhost:3000'])
 
 # Load the ML model
-model = joblib.load('C:/Users/abhis/Desktop/mp-react/frontend/src/saved_models/heart_disease_model.sav')
+model = joblib.load('/Users/DT/mp-react/backend/ML_Models/heart_disease_model.sav')
 
 @app.route('/predict', methods=['POST'])
 def predict():

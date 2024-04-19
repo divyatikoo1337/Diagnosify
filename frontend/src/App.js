@@ -7,6 +7,7 @@ import Info from "./pages/Info";
 import Doctors from "./pages/Doctors";
 import HeartInputForm from "./pages/HeartInputForm";
 import MLPredictor from "./components/MLPredictor";
+import MLDiabetesPredictor from "./components/MLDiabetesPredictor";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           <Route path="/liver-disease-detection" element={<Liver />}/>
           <Route path="/heart-disease-detection" element={<MLPredictor />}/>
           <Route path="/breast-cancer-detection" element={<Liver />}/>
-          <Route path="/diabetes-detection" element={<Liver />}/>
+          <Route path="/diabetes-detection" element={<MLDiabetesPredictor />}/>
           <Route path="/parkinsons-detection" element={<Liver />}/>
           <Route path="/doctors-panel" element={<Doctors />}/>
           <Route path="/information" element={<Info />}/>
