@@ -26,7 +26,6 @@ const MLParkinsonsPredictor = () => {
   spread2: '',
   d2: '',
   ppeStatus: '',
-  Status: '',
 });
 
 const [prediction, setPrediction] = useState(null);
@@ -42,7 +41,7 @@ const handleChange = (e) => {
 const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    const response = await axios.post("http://localhost:5000/predict", {
+    const response = await axios.post("http://localhost:5000/parkinsons", {
       mdvpFo: parseFloat(formData.mdvpFo),
       mdvpFhi: parseFloat(formData.mdvpFhi),
       mdvpFlo: parseFloat(formData.mdvpFlo),
@@ -65,7 +64,7 @@ const handleSubmit = async (e) => {
       spread2: parseFloat(formData.spread2),
       d2: parseFloat(formData.d2),
       ppeStatus: parseFloat(formData.ppeStatus),
-      Status: parseFloat(formData.Status),
+
     });
     setPrediction(response.data.prediction[0]);
     console.log(response.data.prediction[0]);
@@ -418,18 +417,19 @@ const handleSubmit = async (e) => {
           {/* PPE  */}
           <div className="flex flex-col">
             <label htmlFor="ppe" className="mb-2 font-bold">
-              PPE
+            PPE
             </label>
             <input
-              type="text"
-              id="ppe"
-              name="ppe"
+              type="number"
+              id="ppeStatus"
+              name="ppeStatus"
               placeholder="Enter PPE"
               value={formData.ppeStatus}
               onChange={handleChange}
               className="rounded-md border border-gray-400 px-2 py-1"
             />
           </div>
+          
         </div>
         <div className='flex justify-center '>
           <button className="bg-green-500 text-white px-4 py-2 rounded-md mt-4 " onClick={handleSubmit}>Submit</button>

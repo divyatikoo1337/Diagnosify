@@ -6,7 +6,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 
-diabetes_dataset = pd.read_csv(r'C:\Users\abhis\Desktop\mini-project\dataset\breast_cancer.csv')
+diabetes_dataset = pd.read_csv(r'backend\dataset\breast_cancer.csv')
 
 X = diabetes_dataset.drop(columns = ['diagnosis','id'], axis=1) # 0 - malignant , 1 - benign
 Y = diabetes_dataset['diagnosis']

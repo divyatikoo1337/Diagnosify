@@ -6,7 +6,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 
-parkinson_dataset = pd.read_csv(r'dataset\parkinsons.csv')
+parkinson_dataset = pd.read_csv(r'backend\dataset\parkinsons.csv')
 
 
 # Drop rows with missing values

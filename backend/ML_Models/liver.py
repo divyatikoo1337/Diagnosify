@@ -1,14 +1,12 @@
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
-from sklearn.ensemble import RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 
-liver_dataset = pd.read_csv(r'dataset\liver.csv')
+liver_dataset = pd.read_csv(r'backend\dataset\liver.csv')
 
 
 # Drop rows with missing values
@@ -23,9 +21,7 @@ Y = liver_dataset['Status']
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, stratify=Y, random_state=2)
 
 classifiers = {
-    'KNN': KNeighborsClassifier(n_neighbors=2),
     'Decision Tree': DecisionTreeClassifier(random_state=42, max_depth=5),
-    'Random Forest': RandomForestClassifier(random_state=42),
     'SVM': SVC(kernel='linear'),
     'Logistic Regression': LogisticRegression(max_iter=1000)}
 

@@ -7,7 +7,9 @@ import Info from "./pages/Info";
 import Doctors from "./pages/Doctors";
 import MLHeartPredictor from "./components/MLHeartPredictor";
 import MLDiabetesPredictor from "./components/MLDiabetesPredictor";
-
+import MLParkinsonsPredictor from "./components/MLParkinsonsPredictor";
+import MLLiverPredictor from "./components/MLLiverPredictor";
+import MLCancerPredictor from "./components/MLCancerPredictor";
 function App() {
   return (
     <Router>
@@ -15,9 +17,9 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />}/>
-          <Route path="/liver-disease-detection" element={<Liver />}/>
-          <Route path="/heart-disease-detection" element={<MLPredictor />}/>
-          <Route path="/breast-cancer-detection" element={<Liver />}/>
+          <Route path="/liver-disease-detection" element={<MLLiverPredictor />}/>
+          <Route path="/heart-disease-detection" element={<MLHeartPredictor />}/>
+          <Route path="/breast-cancer-detection" element={<MLCancerPredictor />}/>
           <Route path="/diabetes-detection" element={<MLDiabetesPredictor />}/>
           <Route path="/parkinsons-detection" element={<MLParkinsonsPredictor />}/>
           <Route path="/doctors-panel" element={<Doctors />}/>
