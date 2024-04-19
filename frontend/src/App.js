@@ -16,13 +16,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/liver-disease-detection" element={<Liver />}/>
-          <Route path="/heart-disease-detection" element={<MLHeartPredictor />}/>
+          <Route path="/heart-disease-detection" element={<MLPredictor />}/>
           <Route path="/breast-cancer-detection" element={<Liver />}/>
           <Route path="/diabetes-detection" element={<MLDiabetesPredictor />}/>
-          <Route path="/parkinsons-detection" element={<Liver />}/>
+          <Route path="/parkinsons-detection" element={<MLParkinsonsPredictor />}/>
           <Route path="/doctors-panel" element={<Doctors />}/>
           <Route path="/information" element={<Info />}/>
-        
           </Routes>
       </div>
     </Router>
