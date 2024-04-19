@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-function MLPredictor() {
+function MLHeartPredictor() {
   const [formData, setFormData] = useState({
     age: '',
     sex: '',
@@ -274,4 +274,4 @@ function MLPredictor() {
     </div>
   );
 };
-export default MLPredictor;
+export default MLHeartPredictor;

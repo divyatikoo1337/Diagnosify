@@ -26,7 +26,7 @@ const MLDiabetesPredictor = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      const response = await axios.post("http://localhost:5000/predict", {
+      const response = await axios.post("http:/localhost:5000/diabetes", {
         pregnancies: parseInt(formData.pregnancies),
         glucose: parseInt(formData.glucose),
         bloodPressure: parseInt(formData.bloodPressure),

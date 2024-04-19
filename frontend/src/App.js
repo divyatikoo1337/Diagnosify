@@ -5,8 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Liver from "./pages/Liver";
 import Info from "./pages/Info";
 import Doctors from "./pages/Doctors";
-import HeartInputForm from "./pages/HeartInputForm";
-import MLPredictor from "./components/MLPredictor";
+import MLHeartPredictor from "./components/MLHeartPredictor";
 import MLDiabetesPredictor from "./components/MLDiabetesPredictor";
 
 function App() {
@@ -17,7 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/liver-disease-detection" element={<Liver />}/>
-          <Route path="/heart-disease-detection" element={<MLPredictor />}/>
+          <Route path="/heart-disease-detection" element={<MLHeartPredictor />}/>
           <Route path="/breast-cancer-detection" element={<Liver />}/>
           <Route path="/diabetes-detection" element={<MLDiabetesPredictor />}/>
           <Route path="/parkinsons-detection" element={<Liver />}/>
