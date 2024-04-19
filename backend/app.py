@@ -8,7 +8,7 @@ CORS(app, origins=['http://localhost:3000'])
 # Load the ML model
 model = joblib.load('/Users/DT/mp-react/backend/ML_Models/heart_disease_model.sav')
 
-@app.route('/predict', methods=['POST'])
+@app.route('/heart', methods=['POST'])
 def predict():
     data = request.json
     

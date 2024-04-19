@@ -30,7 +30,7 @@ function MLPredictor() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      const response = await axios.post("http://localhost:5000/predict", {
+      const response = await axios.post("http://localhost:5000/heart", {
         age: parseInt(formData.age),
         sex: parseInt(formData.sex),
         cp: parseInt(formData.cp),
