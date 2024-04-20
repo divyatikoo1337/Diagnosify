@@ -6,11 +6,11 @@ app = Flask(__name__)
 
 CORS(app, resources={r"/*": {"origins": "*"}}) 
 # Load the ML model
-heart_model = joblib.load('C:/Users/abhis/Desktop/mp-react/frontend/src/saved_models/heart_disease_model.sav')
-diabetes_model = joblib.load('C:/Users/abhis/Desktop/mp-react/frontend/src/saved_models/diabetes_model.sav')
-parkinsons_model  =  joblib.load('C:/Users/abhis/Desktop/mp-react/frontend/src/saved_models/parkinsons_model.sav')
-liver_model = joblib.load('C:/Users/abhis/Desktop/mp-react/frontend/src/saved_models/liver_model.sav')
-breast_cancer_model = joblib.load('C:/Users/abhis/Desktop/mp-react/frontend/src/saved_models/liver_model.sav')
+heart_model = joblib.load('frontend/src/saved_models/breastcancer_model.sav')
+diabetes_model = joblib.load('frontend/src/saved_models/diabetes_model.sav')
+parkinsons_model  =  joblib.load('frontend/src/saved_models/parkinsons_model.sav')
+liver_model = joblib.load('frontend/src/saved_models/liver_model.sav')
+breast_cancer_model = joblib.load('frontend/src/saved_models/breastcancer_model.sav')
 @app.route('/heart', methods=['POST'])
 def predict():
     data = request.json

@@ -32,7 +32,14 @@ function MLDiabetesPredictor() {
       console.error("Error predicting:", error);
     }
   };
-
+  const getPredictionText = () => {
+    if (prediction === 0) {
+      return <p className="font-bold text-red-600">This person has diabetes</p>;
+    } else if (prediction === 1) {
+      return <p className="font-bold text-green-600">This person does not have diabetes</p>;
+    } else {
+      return null;
+    }}
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-xl font-bold mb-4 text-center p-5">Diabetes Disease detection data form</h1>
@@ -172,7 +179,7 @@ function MLDiabetesPredictor() {
         </div>
         <div className='flex justify-center '>
           <button className="bg-green-500 text-white px-4 py-2 rounded-md mt-4 " onClick={handleSubmit}>Submit</button>
-          {prediction && <p>Prediction: {prediction}</p>}
+          {getPredictionText()}
         </div>
       </form>
     </div>

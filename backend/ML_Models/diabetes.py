@@ -6,7 +6,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 
-diabetes_dataset = pd.read_csv(r'C:\Users\abhis\Desktop\mini-project\dataset\diabetes.csv')
+diabetes_dataset = pd.read_csv(r'backend\dataset\diabetes.csv')
 
 
 # Drop rows with missing values

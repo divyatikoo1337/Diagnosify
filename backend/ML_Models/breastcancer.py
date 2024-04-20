@@ -62,7 +62,7 @@ input_data_as_numpy_array = np.asarray(input_data)
 # reshape the array as we are predicting for one instance
 input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
 
-prediction = best_classifier.predict(input_data_reshaped)
+prediction = loaded_model.predict(input_data_reshaped)
 
 if (prediction[0] == 0):
   print('The person has malignant breast cancer')

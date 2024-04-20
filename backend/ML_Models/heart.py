@@ -6,7 +6,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 
-heart_dataset = pd.read_csv(r'C:\Users\abhis\Desktop\mp-react\backend\dataset\heart.csv')
+heart_dataset = pd.read_csv(r'backend\dataset\heart.csv')
 
 
 # Drop rows with missing values
