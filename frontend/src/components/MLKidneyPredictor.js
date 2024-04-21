@@ -83,7 +83,6 @@ function MLKidneyPredictor() {
       return null;
     }
   };
-  return (
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -476,7 +475,7 @@ function MLKidneyPredictor() {
         </div>
         <div className='flex justify-center '>
           <button className="bg-green-500 text-white px-4 py-2 rounded-md mt-4 " onClick={handleSubmit}>Submit</button>
-          {prediction && <p>Prediction: {prediction}</p>}
+          {getPredictionText()}
         </div>
       </form>
     </div>
