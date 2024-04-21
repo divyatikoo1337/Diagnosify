@@ -18,7 +18,7 @@ function Navbar() {
           <li><Link to="/parkinsons-detection" className="text-white hover:text-gray-200">Parkinson's</Link></li>
           <li><Link to="/liver-disease-detection" className="text-white hover:text-gray-200">Liver Cancer</Link></li>
           <li><Link to="/breast-cancer-detection" className="text-white hover:text-gray-200">Breast Cancer</Link></li>
-          <li><Link to="/ckd" className="text-white hover:text-gray-200">CKD</Link></li>
+          <li><Link to="/ckd-detection" className="text-white hover:text-gray-200">CKD</Link></li>
           <li><Link to="/doctors-panel" className="text-white hover:text-gray-200">Doctors</Link></li>
           <li><Link to="/information" className="text-white hover:text-gray-200">Info</Link></li>
         </ul>

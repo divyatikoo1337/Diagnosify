@@ -34,9 +34,9 @@ function MLDiabetesPredictor() {
   };
   const getPredictionText = () => {
     if (prediction === 0) {
-      return <p className="font-bold text-red-600">This person has diabetes</p>;
+      return <p className="font-bold text-red-600">This person does not have diabetes</p>;
     } else if (prediction === 1) {
-      return <p className="font-bold text-green-600">This person does not have diabetes</p>;
+      return <p className="font-bold text-green-600">This person has diabetes</p>;
     } else {
       return null;
     }}

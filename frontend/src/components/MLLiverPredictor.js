@@ -36,9 +36,9 @@ function MLLiverPredictor() {
   };
   const getPredictionText = () => {
     if (prediction === 1) {
-      return <p className="font-bold text-red-600">This person has liver disease</p>;
+      return <p className="font-bold text-red-600">This person does not have liver disease</p>;
     } else if (prediction === 2) {
-      return <p className="font-bold text-green-600">This person does not have liver disease</p>;
+      return <p className="font-bold text-green-600">This person has liver disease</p>;
     } else {
       return null;
     }}

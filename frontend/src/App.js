@@ -10,6 +10,7 @@ import MLDiabetesPredictor from "./components/MLDiabetesPredictor";
 import MLParkinsonsPredictor from "./components/MLParkinsonsPredictor";
 import MLLiverPredictor from "./components/MLLiverPredictor";
 import MLCancerPredictor from "./components/MLCancerPredictor";
+import MLKidneyPredictor from "./components/MLKidneyPredictor";
 function App() {
   return (
     <Router>
@@ -22,6 +23,7 @@ function App() {
           <Route path="/breast-cancer-detection" element={<MLCancerPredictor />}/>
           <Route path="/diabetes-detection" element={<MLDiabetesPredictor />}/>
           <Route path="/parkinsons-detection" element={<MLParkinsonsPredictor />}/>
+          <Route path="/ckd-detection" element={<MLKidneyPredictor />}/>
           <Route path="/doctors-panel" element={<Doctors />}/>
           <Route path="/information" element={<Info />}/>
           </Routes>

@@ -6,11 +6,12 @@ app = Flask(__name__)
 
 CORS(app, resources={r"/*": {"origins": "*"}}) 
 # Load the ML model
-heart_model = joblib.load('frontend/src/saved_models/breastcancer_model.sav')
-diabetes_model = joblib.load('frontend/src/saved_models/diabetes_model.sav')
-parkinsons_model  =  joblib.load('frontend/src/saved_models/parkinsons_model.sav')
-liver_model = joblib.load('frontend/src/saved_models/liver_model.sav')
-breast_cancer_model = joblib.load('frontend/src/saved_models/breastcancer_model.sav')
+heart_model = joblib.load('C:/Users/abhis/Desktop/mp-react/frontend/src/saved_models/heart_disease_model.sav')
+diabetes_model = joblib.load('C:/Users/abhis/Desktop/mp-react/frontend/src/saved_models/diabetes_model.sav')
+parkinsons_model  =  joblib.load('C:/Users/abhis/Desktop/mp-react/frontend/src/saved_models/parkinsons_model.sav')
+liver_model = joblib.load('C:/Users/abhis/Desktop/mp-react/frontend/src/saved_models/liver_model.sav')
+breast_cancer_model = joblib.load('C:/Users/abhis/Desktop/mp-react/frontend/src/saved_models/breastcancer_model.sav')
+kidney_model = joblib.load('C:/Users/abhis/Desktop/mp-react/frontend/src/saved_models/kidney_disease_model.sav')
 @app.route('/heart', methods=['POST'])
 def predict():
     data = request.json
@@ -163,6 +164,45 @@ def breast_cancer():
     ]]
     # Make prediction
     prediction = breast_cancer_model.predict(features)
+    
+    return jsonify({'prediction': prediction.tolist()})
+@app.route('/ckd', methods=['POST'])
+def ckd():
+    data = request.json
+    # Extract form data from the request
+    age = float(data['age'])
+    blood_pressure = float(data['bloodPressure'])
+    specific_gravity = float(data['specificGravity'])
+    albumin = float(data['albumin'])
+    sugar = float(data['sugar'])
+    blood_glucose_random = float(data['bloodGlucoseRandom'])
+    blood_urea = float(data['bloodUrea'])
+    serum_creatinine = float(data['serumCreatinine'])
+    sodium = float(data['sodium'])
+    potassium = float(data['potassium'])
+    hemoglobin = float(data['hemoglobin'])
+    packed_cell_volume = float(data['packedCellVolume'])
+    white_blood_cells = float(data['whiteBloodCells'])
+    red_blood_cells = float(data['redBloodCells'])
+    red_blood_cells_normal = float(data['redBloodCellsNormal'])
+    pus_cells_normal = float(data['pusCellsNormal'])
+    pus_cell_clumps = float(data['pusCellClumps'])
+    bacteria = float(data['bacteria'])
+    hypertension = float(data['hypertension'])
+    diabetes_mellitus = float(data['diabetesMellitus'])
+    coronary_artery_disease = float(data['coronaryArteryDisease'])
+    appetite = float(data['appetite'])
+    pedal_edema = float(data['pedalEdema'])
+    anemia = float(data['anemia'])
+    
+    # Create a feature list
+    features = [
+    [age, blood_pressure, specific_gravity, albumin, sugar, blood_glucose_random, blood_urea, serum_creatinine, sodium, potassium, hemoglobin, packed_cell_volume, white_blood_cells, red_blood_cells, red_blood_cells_normal, pus_cells_normal, pus_cell_clumps, bacteria, hypertension, diabetes_mellitus, coronary_artery_disease, appetite, pedal_edema, anemia]
+]
+
+    
+    # Make prediction
+    prediction = kidney_model.predict(features)
     
     return jsonify({'prediction': prediction.tolist()})
 if __name__ == '__main__':

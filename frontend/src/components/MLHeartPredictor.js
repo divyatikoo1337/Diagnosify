@@ -53,9 +53,9 @@ function MLHeartPredictor() {
   };
   const getPredictionText = () => {
     if (prediction === 0) {
-      return <p className="font-bold text-red-600">This person has heart disease</p>;
+      return <p className="font-bold text-red-600">This person does not have heart disease</p>;
     } else if (prediction === 1) {
-      return <p className="font-bold text-green-600">This person does not have heart disease</p>;
+      return <p className="font-bold text-green-600">This person has heart disease</p>;
     } else {
       return null;
     }

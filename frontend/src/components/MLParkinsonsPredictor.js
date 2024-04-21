@@ -74,9 +74,9 @@ const handleSubmit = async (e) => {
 };
 const getPredictionText = () => {
   if (prediction === 0) {
-    return <p className="font-bold text-red-600">This person has parkinsons disease</p>;
+    return <p className="font-bold text-red-600">This person does not have parkinsons disease</p>;
   } else if (prediction === 1) {
-    return <p className="font-bold text-green-600">This person does not have parkinsons disease</p>;
+    return <p className="font-bold text-green-600">This person has parkinsons disease</p>;
   } else {
     return null;
   }}
