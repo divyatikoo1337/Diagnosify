@@ -56,6 +56,136 @@ const Doctors = () => {
     }
 ]
 
+const kidney_doctor_data = [
+    {
+        "name": "Dr. Sanjay Mehta",
+        "details": "16 years of experience in Nephrology.",
+        "hospital_name": "Apollo Hospitals",
+        "branch": "Nephrology",
+        "speciality": "Chronic Kidney Disease",
+        "contact_number": "+91-9876543220",
+        "hospital_url": "https://www.apollohospitals.com/",
+        "photo_url": "https://thumbs.dreamstime.com/b/indian-doctor-25433603.jpg"
+    },
+    {
+        "name": "Dr. Aarti Desai",
+        "details": "14 years of experience in Pediatric Nephrology.",
+        "hospital_name": "Fortis Hospital",
+        "branch": "Nephrology",
+        "speciality": "Pediatric Kidney Diseases",
+        "contact_number": "+91-9988776656",
+        "hospital_url": "https://www.fortishealthcare.com/",
+        "photo_url": "https://thumbs.dreamstime.com/z/indian-doctor-woman-23221105.jpg"
+    },
+    {
+        "name": "Dr. Manish Singh",
+        "details": "18 years of experience in Kidney Transplantation.",
+        "hospital_name": "Max Healthcare",
+        "branch": "Nephrology",
+        "speciality": "Kidney Transplant",
+        "contact_number": "+91-9876543213",
+        "hospital_url": "https://www.maxhealthcare.in/",
+        "photo_url": "https://www.pngitem.com/pimgs/m/194-1943739_indian-doctor-hd-png-download.png"
+    },
+    {
+        "name": "Dr. Priyanka Reddy",
+        "details": "12 years of experience in Dialysis.",
+        "hospital_name": "Medanta - The Medicity",
+        "branch": "Nephrology",
+        "speciality": "Dialysis",
+        "contact_number": "+91-9876543214",
+        "hospital_url": "https://www.medanta.org/",
+        "photo_url": "https://c8.alamy.com/comp/EM02FC/indian-female-doctor-EM02FC.jpg"
+    }
+];
+
+const breast_cancer_doctor_data = [
+    {
+        "name": "Dr. Meera Kapoor",
+        "details": "15 years of experience in Breast Cancer Surgery.",
+        "hospital_name": "Apollo Hospitals",
+        "branch": "Oncology",
+        "speciality": "Breast Cancer Surgery",
+        "contact_number": "+91-9876543230",
+        "hospital_url": "https://www.apollohospitals.com/",
+        "photo_url": "https://thumbs.dreamstime.com/b/indian-doctor-25433603.jpg"
+    },
+    {
+        "name": "Dr. Ritu Jain",
+        "details": "13 years of experience in Breast Cancer Radiation Therapy.",
+        "hospital_name": "Fortis Hospital",
+        "branch": "Oncology",
+        "speciality": "Radiation Therapy",
+        "contact_number": "+91-9988776657",
+        "hospital_url": "https://www.fortishealthcare.com/",
+        "photo_url": "https://thumbs.dreamstime.com/z/indian-doctor-woman-23221105.jpg"
+    },
+    {
+        "name": "Dr. Vikas Sharma",
+        "details": "17 years of experience in Breast Cancer Medical Oncology.",
+        "hospital_name": "Max Healthcare",
+        "branch": "Oncology",
+        "speciality": "Medical Oncology",
+        "contact_number": "+91-9876543215",
+        "hospital_url": "https://www.maxhealthcare.in/",
+        "photo_url": "https://www.pngitem.com/pimgs/m/194-1943739_indian-doctor-hd-png-download.png"
+    },
+    {
+        "name": "Dr. Sunita Menon",
+        "details": "11 years of experience in Breast Cancer Pathology.",
+        "hospital_name": "Medanta - The Medicity",
+        "branch": "Oncology",
+        "speciality": "Pathology",
+        "contact_number": "+91-9876543216",
+        "hospital_url": "https://www.medanta.org/",
+        "photo_url": "https://c8.alamy.com/comp/EM02FC/indian-female-doctor-EM02FC.jpg"
+    }
+];
+
+const liver_specialist_data = [
+    {
+        "name": "Dr. Anil Gupta",
+        "details": "16 years of experience in Hepatology.",
+        "hospital_name": "Apollo Hospitals",
+        "branch": "Gastroenterology",
+        "speciality": "Hepatology",
+        "contact_number": "+91-9876543240",
+        "hospital_url": "https://www.apollohospitals.com/",
+        "photo_url": "https://thumbs.dreamstime.com/b/indian-doctor-25433603.jpg"
+    },
+    {
+        "name": "Dr. Pooja Singh",
+        "details": "14 years of experience in Liver Transplantation.",
+        "hospital_name": "Fortis Hospital",
+        "branch": "Gastroenterology",
+        "speciality": "Liver Transplantation",
+        "contact_number": "+91-9988776658",
+        "hospital_url": "https://www.fortishealthcare.com/",
+        "photo_url": "https://thumbs.dreamstime.com/z/indian-doctor-woman-23221105.jpg"
+    },
+    {
+        "name": "Dr. Vikram Mehta",
+        "details": "18 years of experience in Hepatic Oncology.",
+        "hospital_name": "Max Healthcare",
+        "branch": "Gastroenterology",
+        "speciality": "Hepatic Oncology",
+        "contact_number": "+91-9876543217",
+        "hospital_url": "https://www.maxhealthcare.in/",
+        "photo_url": "https://www.pngitem.com/pimgs/m/194-1943739_indian-doctor-hd-png-download.png"
+    },
+    {
+        "name": "Dr. Sunita Reddy",
+        "details": "12 years of experience in Liver Cirrhosis Treatment.",
+        "hospital_name": "Medanta - The Medicity",
+        "branch": "Gastroenterology",
+        "speciality": "Liver Cirrhosis Treatment",
+        "contact_number": "+91-9876543218",
+        "hospital_url": "https://www.medanta.org/",
+        "photo_url": "https://c8.alamy.com/comp/EM02FC/indian-female-doctor-EM02FC.jpg"
+    }
+];
+
+
 const cardiology_doctor_data = [
     {
         "name": "Dr. Ramesh Gupta",
@@ -172,6 +302,15 @@ const parkinsons_doctor_data = [
         <h2 className='text-3xl text-center text-green-800 p-4 text-bold'>Heart specialists</h2>
         {cardiology_doctor_data.map((data) => <DoctorInfo data={data} />)}
 
+        <h2 className='text-3xl text-center text-green-800 p-4 text-bold'>Liver Specialists</h2>
+        {liver_specialist_data.map((data) => <DoctorInfo data={data} />)}
+
+        <h2 className='text-3xl text-center text-green-800 p-4 text-bold'>Breast Cancer Specialists</h2>
+        {breast_cancer_doctor_data.map((data) => <DoctorInfo data={data} />)}
+
+        <h2 className='text-3xl text-center text-green-800 p-4 text-bold'>Kidney Specialists</h2>
+        {kidney_doctor_data.map((data) => <DoctorInfo data={data} />)}
+        
         <h2 className='text-3xl text-center text-green-800 p-4 text-bold'>Parkinsons specialists</h2>
         {parkinsons_doctor_data.map((data) => <DoctorInfo data={data} />)}
       </div>

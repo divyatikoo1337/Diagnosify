@@ -13,7 +13,11 @@ const Home = () => {
             <li>Diabete Detection: Test if you have diabetes or not now!.</li>
             <li>Cardiology: Specialized care for heart diseases and conditions.</li>
             <li>Parkinsons: Treat it with specialised personel help.</li>
+            <li>Liver Disease Detection: Predict the results on time.</li>
+            <li>Breast Cancer: Treat it with specialised personel help.</li>
+            <li>CKD(Cronic Kidney Disease): Finnd out the results instantly.</li>
             <li>Information: Learn the symptoms and the intricicies of your disease.</li>
+            <li>Doctors Panel: Find the specialised doctors in each field in one page.</li>
         </div>
 
         <div className='ps-20 pb-10'>
